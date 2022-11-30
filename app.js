@@ -1,4 +1,5 @@
 const express = require('express');
+// const serverless = require('serverless-http');
 const mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 
@@ -37,3 +38,5 @@ app.use('/review', reviewRouter);
 app.listen(9000, () => {
     console.log("Server started!!");
 })
+
+// module.exports.handler = serverless(app);
