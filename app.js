@@ -28,6 +28,7 @@ app.use('/user', userRouter);
 
 const movieRouter = require('./routes/movies');
 app.use('/movie', movieRouter);
+app.use('/', movieRouter);
 
 const castRouter = require('./routes/casts');
 app.use('/cast', castRouter);
