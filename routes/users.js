@@ -14,6 +14,16 @@ router.get('/', async (req, res) => {
     }
 })
 
+router.get('/ip', async (req, res) => {
+    try {
+        
+        res.send(req.ip);
+    }
+    catch (err) {
+        res.send("Error: " + err);
+    }
+})
+
 router.post('/signup', async (req, res) => {
     const user = new User({
         username: req.body.username,
